@@ -193,7 +193,7 @@ const questions = [
     options: [
       { value: 'focal-lesion', label: 'Focal lesion identified (e.g., cortical dysplasia, tumor, cavernoma)' },
       { value: 'hippocampal-sclerosis', label: 'Hippocampal sclerosis/mesial temporal sclerosis' },
-      { value: 'hemispheric', label: 'Hemispheric abnormality (e.g., hemimegalencephaly, Sturge-Weber)' },
+      { value: 'hemispheric', label: 'Hemispheric abnormality (e.g., stroke, hemimegalencephaly, Sturge-Weber)' },
       { value: 'nonspecific', label: 'Nonspecific findings' },
       { value: 'normal', label: 'Normal MRI (MRI-negative)' },
       { value: 'not-done', label: 'MRI not yet performed or contraindicated' }

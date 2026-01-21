@@ -63,6 +63,10 @@ export function assessSurgicalCandidacy(responses) {
   } else if (focality === 'multifocal') {
     score -= 10
     considerations.push('Multifocal epilepsy may require neuromodulation or palliative procedures')
+    // Check for Lennox-Gastaut syndrome pattern
+    if (seizureTypes.includes('atonic') || seizureTypes.includes('tonic')) {
+      considerations.push('Multiple seizure types with drop attacks suggest possible Lennox-Gastaut syndrome - consider corpus callosotomy, VNS, DBS, or RNS')
+    }
   } else if (focality === 'generalized') {
     score -= 15
     considerations.push('Generalized epilepsy - limited surgical options, consider neuromodulation')
@@ -98,7 +102,7 @@ export function assessSurgicalCandidacy(responses) {
   } else if (mri === 'hemispheric') {
     factors.lesional = true
     score += 20
-    considerations.push('Hemispheric pathology - hemispherectomy/disconnection may be indicated')
+    considerations.push('Hemispheric pathology (e.g., stroke, hemimegalencephaly, Sturge-Weber) - hemispherectomy/disconnection may be indicated')
   } else if (mri === 'normal') {
     score += 5
     considerations.push('MRI-negative epilepsy - may still be surgical candidate with concordant EEG/PET/SPECT data')
@@ -253,7 +257,7 @@ export function assessSurgicalCandidacy(responses) {
         description: 'Implanted device that detects and responds to seizure activity with electrical stimulation',
         successRate: '50-75% responders',
         indication: 'Focal epilepsy with 1-2 well-defined foci in eloquent cortex or bilateral independent foci',
-        considerations: 'Allows treatment of eloquent cortex; requires clear localization'
+        considerations: 'Allows treatment of eloquent cortex; requires clear localization; may be used off-label for pediatric patients'
       })
     }
 
@@ -265,6 +269,17 @@ export function assessSurgicalCandidacy(responses) {
         successRate: '40-70% responders',
         indication: 'Drug-resistant epilepsy, particularly with drop attacks or multifocal/generalized',
         considerations: 'Emerging therapy; anterior nucleus thalamus (ANT) most studied target'
+      })
+    }
+
+    // RNS for generalized epilepsy (off-label)
+    if (factors.drugResistant && focality === 'generalized') {
+      surgicalOptions.push({
+        name: 'Responsive Neurostimulation (RNS) - Off-Label',
+        description: 'Implanted device that detects and responds to seizure activity with electrical stimulation',
+        successRate: 'Variable (off-label use)',
+        indication: 'Drug-resistant generalized epilepsy when other options are limited',
+        considerations: 'Off-label use for generalized epilepsy; limited data but may be considered in select cases'
       })
     }
 
