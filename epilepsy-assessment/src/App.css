@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.welcome-screen {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.welcome-content {
+  background: white;
+  border-radius: 16px;
+  padding: 48px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.welcome-content h1 {
+  color: #1f2937;
+  font-size: 2.5rem;
+  margin-bottom: 24px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.welcome-intro {
+  color: #4b5563;
+  font-size: 1.125rem;
+  line-height: 1.75;
+}
+
+.welcome-intro > p {
+  margin-bottom: 32px;
+}
+
+.disclaimer {
+  background: #fef3c7;
+  border: 2px solid #fbbf24;
+  border-radius: 12px;
+  padding: 24px;
+  margin: 32px 0;
+}
+
+.disclaimer h3 {
+  color: #92400e;
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+}
+
+.disclaimer p {
+  color: #78350f;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.disclaimer p:last-child {
+  margin-bottom: 0;
+}
+
+.start-button {
+  width: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 18px 36px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.start-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+}
+
+.start-button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .welcome-content {
+    padding: 32px 24px;
+  }
+
+  .welcome-content h1 {
+    font-size: 1.875rem;
+  }
+
+  .welcome-intro {
+    font-size: 1rem;
+  }
+}
+
+@media print {
+  body {
+    background: white;
+  }
+
+  .app {
+    padding: 0;
+  }
+
+  .action-buttons {
+    display: none;
+  }
+}
