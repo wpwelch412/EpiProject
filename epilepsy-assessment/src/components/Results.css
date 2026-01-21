@@ -1,0 +1,398 @@
+.results-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.results-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 40px;
+  text-align: center;
+}
+
+.results-header h1 {
+  font-size: 2.25rem;
+  margin-bottom: 12px;
+}
+
+.results-date {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.candidacy-summary {
+  padding: 40px;
+  text-align: center;
+  background: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.candidacy-badge {
+  display: inline-block;
+  padding: 16px 48px;
+  border-radius: 50px;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.candidacy-description {
+  font-size: 1.25rem;
+  color: #4b5563;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.factors-section {
+  padding: 40px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.factors-section h2 {
+  font-size: 1.75rem;
+  color: #1f2937;
+  margin-bottom: 24px;
+}
+
+.factors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.factor-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 8px;
+  border: 2px solid;
+}
+
+.factor-item.positive {
+  background: #ecfdf5;
+  border-color: #10b981;
+}
+
+.factor-item.negative {
+  background: #fef2f2;
+  border-color: #ef4444;
+}
+
+.factor-item.neutral {
+  background: #f9fafb;
+  border-color: #d1d5db;
+}
+
+.factor-icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.factor-item.positive .factor-icon {
+  color: #10b981;
+}
+
+.factor-item.negative .factor-icon {
+  color: #ef4444;
+}
+
+.factor-item.neutral .factor-icon {
+  color: #9ca3af;
+}
+
+.factor-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.considerations-section {
+  padding: 40px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.considerations-section h2 {
+  font-size: 1.75rem;
+  color: #1f2937;
+  margin-bottom: 20px;
+}
+
+.considerations-list {
+  list-style: none;
+  padding: 0;
+}
+
+.considerations-list li {
+  padding: 16px;
+  margin-bottom: 12px;
+  background: #fef3c7;
+  border-left: 4px solid #f59e0b;
+  border-radius: 4px;
+  color: #78350f;
+  line-height: 1.6;
+}
+
+.considerations-list li:last-child {
+  margin-bottom: 0;
+}
+
+.surgical-options-section {
+  padding: 40px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.surgical-options-section h2 {
+  font-size: 1.75rem;
+  color: #1f2937;
+  margin-bottom: 16px;
+}
+
+.section-intro {
+  color: #6b7280;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.option-card {
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 24px;
+  transition: all 0.2s;
+}
+
+.option-card:hover {
+  border-color: #667eea;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.1);
+}
+
+.option-card h3 {
+  color: #667eea;
+  font-size: 1.375rem;
+  margin-bottom: 12px;
+}
+
+.option-description {
+  color: #4b5563;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.option-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.detail-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 12px;
+  padding: 12px;
+  background: #f9fafb;
+  border-radius: 6px;
+}
+
+.detail-item strong {
+  color: #374151;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.detail-item span {
+  color: #6b7280;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.detail-item.considerations {
+  grid-template-columns: 140px 1fr;
+}
+
+.next-steps-section {
+  padding: 40px;
+  background: #f0fdf4;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.next-steps-section h2 {
+  font-size: 1.75rem;
+  color: #1f2937;
+  margin-bottom: 20px;
+}
+
+.next-steps-list {
+  list-style: none;
+  counter-reset: step-counter;
+  padding: 0;
+}
+
+.next-steps-list li {
+  counter-increment: step-counter;
+  padding: 16px 16px 16px 56px;
+  margin-bottom: 12px;
+  background: white;
+  border: 2px solid #10b981;
+  border-radius: 8px;
+  color: #065f46;
+  line-height: 1.6;
+  position: relative;
+}
+
+.next-steps-list li::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  background: #10b981;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.875rem;
+}
+
+.next-steps-list li:last-child {
+  margin-bottom: 0;
+}
+
+.important-notice {
+  padding: 40px;
+  background: #fef2f2;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.important-notice h3 {
+  color: #991b1b;
+  font-size: 1.375rem;
+  margin-bottom: 16px;
+}
+
+.important-notice p {
+  color: #7f1d1d;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.important-notice p:last-child {
+  margin-bottom: 0;
+}
+
+.action-buttons {
+  padding: 32px 40px;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  background: #f9fafb;
+}
+
+.print-button,
+.restart-button {
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.print-button {
+  background: white;
+  color: #667eea;
+  border: 2px solid #667eea;
+}
+
+.print-button:hover {
+  background: #f9fafb;
+}
+
+.restart-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.restart-button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .results-header {
+    padding: 32px 24px;
+  }
+
+  .results-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .candidacy-summary,
+  .factors-section,
+  .considerations-section,
+  .surgical-options-section,
+  .next-steps-section,
+  .important-notice {
+    padding: 32px 24px;
+  }
+
+  .candidacy-badge {
+    font-size: 1.25rem;
+    padding: 12px 32px;
+  }
+
+  .factors-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-item {
+    grid-template-columns: 1fr;
+  }
+
+  .action-buttons {
+    padding: 24px;
+    flex-direction: column;
+  }
+
+  .print-button,
+  .restart-button {
+    width: 100%;
+  }
+}
+
+@media print {
+  .results-container {
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .action-buttons {
+    display: none;
+  }
+
+  .option-card {
+    page-break-inside: avoid;
+  }
+}
